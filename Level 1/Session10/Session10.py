@@ -1,9 +1,8 @@
-from ultralytics import YOLO
-import matplotlib.pyplot as plt
 import cv2
+import matplotlib.pyplot as plt
+from ultralytics import YOLO
 
 model = YOLO('yolov8n.pt')  # load an official model
-
 
 results = model('https://ultralytics.com/images/bus.jpg')  # predict on an image
 

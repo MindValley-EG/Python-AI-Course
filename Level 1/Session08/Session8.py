@@ -14,13 +14,13 @@ punctuation = punctuation + '\n'
 
 word_frequencies = {}
 for word in doc:
-	if word.text.lower() not in stopwords:
-    	if word.text.lower() not in punctuation:
+    if word.text.lower() not in stopwords:
+        if word.text.lower() not in punctuation:
         	# If a word reached this condition, it means it's neither a stopword nor a punctuation
         	# then we check if it's already added to the `word_frequencies` dictionary
         	if word.text not in word_frequencies.keys():
-            	word_frequencies[word.text] = 1
-        	else:
+                word_frequencies[word.text] = 1
+			else:
             	word_frequencies[word.text] += 1
 
 
